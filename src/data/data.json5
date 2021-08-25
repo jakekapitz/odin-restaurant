@@ -1,0 +1,78 @@
+{
+  name: 'Tasty Eats',
+  menu: [
+    {
+      title: 'Burger',
+      description: 'Meat, pickles, cheese, lettuce, tomato, bacon and sauce on a sesame seed bun',
+      price: 11.99,
+      image: 'burger.jpg',
+    },
+    {
+      title: 'Pizza',
+      description: 'Ham, chicken, pepperoni, salami, cheese on a tomato base',
+      price: 18.99,
+      image: 'pizza.jpg',
+    },
+    {
+      title: 'Pasta',
+      description: 'Traditional beef ragu served on pappardelle pasta',
+      price: 14.99,
+      image: 'pasta.jpg',
+    },
+    {
+      title: 'Chips',
+      description: 'Fried chips with chicken salt',
+      price: 4.99,
+      image: 'chips.jpg',
+    },
+  ],
+  address: {
+    street: '123 Fake St',
+    suburb: 'Faketown',
+    state: 'VIC',
+    postcode: 3000,
+  },
+  phone: '(03) 9000 9000',
+  hours: [
+    {
+      day: 'Mon',
+      isOpen: true,
+      open: '7am',
+      close: '5:30pm',
+    },
+    {
+      day: 'Tues',
+      isOpen: true,
+      open: '7am',
+      close: '5:30pm',
+    },
+    {
+      day: 'Wed',
+      isOpen: true,
+      open: '7am',
+      close: '5:30pm',
+    },
+    {
+      day: 'Thurs',
+      isOpen: true,
+      open: '7am',
+      close: '5:30pm',
+    },
+    {
+      day: 'Fri',
+      isOpen: true,
+      open: '7am',
+      close: '5:30pm',
+    },
+    {
+      day: 'Sat',
+      isOpen: true,
+      open: '9am',
+      close: '5:30pm',
+    },
+    {
+      day: 'Sun',
+      isOpen: false,
+    },
+  ],
+}

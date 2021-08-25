@@ -1,0 +1,324 @@
+.navbar ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.navbar li {
+  margin-left: 5rem;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.navbar li:hover {
+  color: var(--text-color-softer);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.navbar li:first-of-type {
+  margin-left: 0;
+}
+
+.navbar li.active {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  min-height: 7.5vh;
+  margin-bottom: -7.5vh;
+  align-items: center;
+  z-index: 1;
+  box-shadow: 0 0.3px 0.3px rgba(0, 0, 0, 0.047),
+    0 0.7px 0.9px rgba(0, 0, 0, 0.067), 0 1.4px 1.8px rgba(0, 0, 0, 0.083),
+    0 2.9px 3.7px rgba(0, 0, 0, 0.103), 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  color: var(--accent-color);
+  font-size: 3rem;
+  font-family: 'Rock Salt';
+  margin-bottom: 0;
+  text-shadow: 2px 1px 3px hsl(220, 66%, 42%);
+}
+
+header {
+}
+
+main {
+  background: var(--background-color-softer);
+  min-height: 100vh;
+  margin-bottom: 5vh;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  min-height: 5vh;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid darkgray;
+  background: var(--background-color);
+}
+
+footer p {
+  margin-block: 1rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh; /* if you don't want it to take up the full screen, reduce this number */
+  overflow: hidden;
+  background-size: cover !important;
+  background: linear-gradient(
+      to top,
+      hsla(0, 0%, 0%, 0%) 0%,
+      hsla(0, 0%, 100%, 0%) 92.5%,
+      hsla(0, 0%, 100%, 65%) 92.5%,
+      hsla(0, 0%, 100%, 65%) 100%
+    ),
+    url(./img/hero.jpg) no-repeat center center scroll;
+}
+
+.hero h2 {
+  font-size: 6rem;
+  font-family: 'Rock Salt';
+  color: var(--accent-color);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  font-weight: 800;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+}
+
+.hero p {
+  font-size: 2rem;
+}
+
+.hero button {
+  margin-inline: 1rem;
+  height: 44px;
+  padding: 0 36px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.hero button:first-of-type {
+  background: var(--background-color-softer);
+}
+
+.hidden {
+  display: none;
+}
+
+.menu,
+.contact {
+  max-width: var(--grid-max-width);
+  margin-inline: auto;
+  padding-inline: 2rem;
+  text-align: center;
+  padding-top: 12.5vh;
+}
+
+.menu h2,
+.contact h2 {
+  font-family: 'Rock Salt';
+  padding-block: 2rem;
+  text-decoration: var(--accent-color) underline;
+}
+
+.menu-container {
+  grid-template-columns: 1fr;
+  grid-template-rows: 400px;
+  gap: 3rem;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--background-color);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.menu .card {
+  max-height: 400px;
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.menu-item__detail {
+  text-align: left;
+  height: 30%;
+  padding: 1rem 2rem;
+  text-overflow: ellipsis;
+}
+
+h4 {
+  color: var(--accent-color);
+  font-weight: 500;
+  border-bottom: 1px dotted var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.menu-item__detail span {
+  float: right;
+  margin-top: 8px;
+  font-size: 1.75rem;
+  color: var(--text-color-softer);
+  vertical-align: bottom;
+}
+
+.menu-item__detail p {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .menu-container {
+    grid-template-rows: 200px;
+  }
+
+  .card {
+    flex-flow: row nowrap;
+  }
+
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .menu-item__detail {
+    position: static;
+    text-align: left;
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .menu-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Contact Page Styles */
+.contact-container {
+  display: grid;
+  max-width: 960px;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding-block: 10px;
+  margin-inline: auto;
+}
+
+@media (min-width: 600px) {
+  .contact-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-container {
+    grid-template-columns: 40% 1fr;
+  }
+}
+
+/* Contact Information Styles */
+.contact-info {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem;
+}
+
+.contact-info p {
+}
+
+.contact-info img {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-info__item {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-info__item:first-of-type {
+  margin-top: 1rem;
+}
+
+.contact-info__item img {
+  width: 32px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info__item ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.contact-info__item li span {
+  font-weight: 700;
+}
+
+/* Contact Form Stlyes */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 1rem;
+  padding: 2rem;
+
+  margin-bottom: 0;
+}
+
+.contact-form div {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .contact-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-form h4 {
+    grid-column: span 2;
+  }
+
+  .contact-form div:nth-of-type(3) {
+    grid-column: span 2;
+  }
+
+  .contact-form button {
+    grid-column: span 2;
+    font-size: 1.5rem;
+  }
+}
